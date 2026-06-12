@@ -1,0 +1,111 @@
+export const stats = [
+  { num: '1,248', label: 'Total Employees', delta: '+34 this quarter', up: true },
+  { num: '94%', label: 'Engagement Score', delta: '+6 pts from last month', up: true },
+  { num: '312', label: 'Kudos this week', delta: 'Most active: Product', up: true },
+  { num: '18', label: 'Events this month', delta: 'Next: All-Hands tomorrow', up: false },
+];
+
+export const announcements = [
+  { id: 1, title: 'New Remote Work Policy — Effective July 1st', dept: 'HR', time: '2 hours ago', badge: 'badge-rose', badgeLabel: 'Action Required', urgent: true, body: 'All employees must review and acknowledge the updated remote work policy by June 25th. Key changes include new overlap hours (10 AM–1 PM IST), equipment stipend updates, and revised connectivity requirements for remote-first roles.', actions: ['Acknowledge', 'Download PDF'] },
+  { id: 2, title: 'Q2 All-Hands — June 11, 3 PM (Virtual + Bangalore HQ)', dept: 'Leadership', time: '1 day ago', badge: 'badge-accent', badgeLabel: 'Leadership', body: 'Our Q2 All-Hands will cover company performance, Phoenix launch recap, H2 strategy, and a special recognition ceremony. All employees are strongly encouraged to attend.', actions: ['Add to Calendar', 'Join Link'] },
+  { id: 3, title: 'Nexus wins Best Workplace 2026 — Great Place to Work certified', dept: 'Culture', time: '3 days ago', badge: 'badge-emerald', badgeLabel: 'Milestone', win: true, body: 'We are proud to announce Nexus Corp has been Great Place to Work certified for 2026, with a 94% employee satisfaction score. This recognition belongs to every one of you.', actions: [] },
+  { id: 4, title: 'System Maintenance Window — June 14, 2–4 AM IST', dept: 'IT', time: '4 days ago', badge: 'badge-amber', badgeLabel: 'IT', body: 'Scheduled maintenance for internal tools and SSO infrastructure. Services including Nexus, Jira, and email may be briefly unavailable. No action required.', actions: [] },
+  { id: 5, title: 'Updated POSH Policy — Annual Review Complete', dept: 'HR', time: '1 week ago', badge: 'badge-accent', badgeLabel: 'Policy', body: 'The Internal Complaints Committee has completed the annual POSH policy review. The updated document is available in the Knowledge Base under HR Policies.', actions: ['View Policy'] },
+  { id: 6, title: 'Q2 Leadership Meet Summary — Key Outcomes', dept: 'Leadership', time: '1 week ago', badge: 'badge-accent', badgeLabel: 'Leadership', body: 'Summary from the June leadership offsite: H2 headcount plan approved (+120 across Engineering and Product), Project Nexus 2.0 greenlit, and new L&D budget doubled to INR 2Cr.', actions: ['Read Summary'] },
+];
+
+export const feed = [
+  { icon: 'ti-rocket', iconBg: '#ECFDF5', iconColor: '#10B981', title: 'Project Phoenix: Launched beta to 500 enterprise clients', dept: 'Engineering', time: '12 min ago', badge: 'badge-emerald', badgeLabel: 'Win' },
+  { icon: 'ti-chart-bar', iconBg: '#EEF2FF', iconColor: '#4F46E5', title: 'Sales team closes INR 4.2Cr deal with MegaCorp — biggest Q2 deal', dept: 'Sales', time: '1 hr ago', badge: 'badge-accent', badgeLabel: 'Milestone' },
+  { icon: 'ti-palette', iconBg: '#FFFBEB', iconColor: '#92400E', title: 'Design team released v2 brand guidelines — available in Knowledge Base', dept: 'Design', time: '3 hrs ago', badge: '', badgeLabel: '' },
+  { icon: 'ti-heart', iconBg: '#FFF1F2', iconColor: '#F43F5E', title: 'Customer Success scores NPS of 78 — highest in company history', dept: 'CX', time: 'Yesterday', badge: 'badge-rose', badgeLabel: 'Record' },
+  { icon: 'ti-users', iconBg: '#F5F3FF', iconColor: '#6D28D9', title: 'People & Culture launches new L&D portal — 200+ courses available', dept: 'HR', time: 'Yesterday', badge: '', badgeLabel: '' },
+];
+
+export const kudosLeaderboard = [
+  { rank: '1', initials: 'PS', bg: '#312E81', fg: '#C7D2FE', name: 'Priya Sharma', dept: 'Product', pts: 284, pct: 95 },
+  { rank: '2', initials: 'AK', bg: '#065F46', fg: '#A7F3D0', name: 'Arjun Kumar', dept: 'Engineering', pts: 241, pct: 82 },
+  { rank: '3', initials: 'MN', bg: '#7F1D1D', fg: '#FECACA', name: 'Megha Nair', dept: 'Design', pts: 218, pct: 74 },
+  { rank: '4', initials: 'RG', bg: '#78350F', fg: '#FDE68A', name: 'Raj Gupta', dept: 'Engineering', pts: 177, pct: 60 },
+  { rank: '5', initials: 'SA', bg: '#0C4A6E', fg: '#BAE6FD', name: 'Shruti Agarwal', dept: 'Customer Success', pts: 159, pct: 54 },
+  { rank: '6', initials: 'VR', bg: '#3B0764', fg: '#E9D5FF', name: 'Varun Reddy', dept: 'Sales', pts: 142, pct: 48 },
+  { rank: '7', initials: 'TK', bg: '#042F2E', fg: '#99F6E4', name: 'Tanvi Kapoor', dept: 'Design', pts: 128, pct: 43 },
+];
+
+export const appreciations = [
+  { fromInit: 'AK', fromBg: '#065F46', fromFg: '#A7F3D0', from: 'Arjun Kumar', to: 'Priya Sharma', fromDept: 'Engineering', toDept: 'Product', time: '30 min ago', msg: 'Priya, your stakeholder management on Phoenix has been incredible — keeping 3 teams aligned under pressure is no small feat. You made it look easy!', badge: 'badge-accent', badgeLabel: 'Collaboration', hearts: 12, replies: 3 },
+  { fromInit: 'MN', fromBg: '#312E81', fromFg: '#C7D2FE', from: 'Megha Nair', to: 'Raj Gupta', fromDept: 'Design', toDept: 'Engineering', time: '2 hrs ago', msg: 'Raj stepped in at 11 PM to fix a critical UI bug before our client demo. Literally saved the day — and delivered it with a smile. Thank you!', badge: 'badge-emerald', badgeLabel: 'Above & Beyond', hearts: 27, replies: 8 },
+  { fromInit: 'VR', fromBg: '#0C4A6E', fromFg: '#BAE6FD', from: 'Vinay Rao', to: 'Sales Team', fromDept: 'Leadership', toDept: 'Sales', time: 'Yesterday', msg: "The entire Sales team's hustle in closing Q2 deals despite market headwinds was extraordinary. 112% attainment is not a number — it is proof of your grit.", badge: 'badge-amber', badgeLabel: 'Team Win', hearts: 54, replies: 14 },
+  { fromInit: 'SA', fromBg: '#0C4A6E', fromFg: '#BAE6FD', from: 'Shruti A.', to: 'Rohan Verma', fromDept: 'Customer Success', toDept: 'Product', time: '2 days ago', msg: "Rohan's quick turnaround on the dashboard bug that affected 3 enterprise clients was remarkable. Zero escalation, fully resolved in under 2 hours.", badge: 'badge-accent', badgeLabel: 'Customer Focus', hearts: 19, replies: 5 },
+];
+
+export const newJoiners = [
+  { initials: 'RV', bg: '#0C4A6E', fg: '#BAE6FD', name: 'Rohan Verma', role: 'Product Manager', dept: 'Product' },
+  { initials: 'NS', bg: '#4C1D95', fg: '#DDD6FE', name: 'Neha Singh', role: 'Finance Analyst', dept: 'Finance' },
+  { initials: 'TK', bg: '#065F46', fg: '#A7F3D0', name: 'Tanvi Kapoor', role: 'UX Designer', dept: 'Design' },
+  { initials: 'SM', bg: '#7F1D1D', fg: '#FECACA', name: 'Suresh M.', role: 'Backend Dev', dept: 'Engineering' },
+  { initials: 'AI', bg: '#78350F', fg: '#FDE68A', name: 'Aisha Ibrahim', role: 'Data Analyst', dept: 'Analytics' },
+  { initials: 'KP', bg: '#1E3A5F', fg: '#BAE6FD', name: 'Karan Patel', role: 'Sales Executive', dept: 'Sales' },
+];
+
+export const teams = [
+  { icon: 'ti-code', iconBg: '#EEF2FF', iconColor: '#4F46E5', name: 'Engineering', sub: '148 people · 6 active projects', pct: 80, color: '#4F46E5', tag: 'Phoenix Beta Live' },
+  { icon: 'ti-package', iconBg: '#ECFDF5', iconColor: '#10B981', name: 'Product', sub: '42 people · 3 active OKRs', pct: 68, color: '#10B981', tag: 'H2 Roadmap Ready' },
+  { icon: 'ti-palette', iconBg: '#FFFBEB', iconColor: '#92400E', name: 'Design', sub: '28 people · Brand v2 launched', pct: 95, color: '#F59E0B', tag: 'Brand v2 Done' },
+  { icon: 'ti-chart-bar', iconBg: '#FFF1F2', iconColor: '#F43F5E', name: 'Sales', sub: '86 people · 112% Q2 attainment', pct: 100, color: '#F43F5E', tag: '112% Q2' },
+  { icon: 'ti-heart', iconBg: '#F0FDF4', iconColor: '#15803D', name: 'Customer Success', sub: '64 people · NPS: 78', pct: 78, color: '#15803D', tag: 'NPS: 78' },
+  { icon: 'ti-speakerphone', iconBg: '#FFF7ED', iconColor: '#C2410C', name: 'Marketing', sub: '31 people · 2 campaigns live', pct: 55, color: '#C2410C', tag: '2 Live Campaigns' },
+  { icon: 'ti-users', iconBg: '#F5F3FF', iconColor: '#6D28D9', name: 'People & Culture', sub: '18 people · GPTW 2026', pct: 90, color: '#6D28D9', tag: 'GPTW 2026' },
+  { icon: 'ti-coin', iconBg: '#ECFEFF', iconColor: '#0E7490', name: 'Finance', sub: '22 people · Q2 close complete', pct: 100, color: '#0E7490', tag: 'Q2 Closed' },
+];
+
+export const milestones = [
+  { text: 'Project Phoenix — Beta Launch to 500 enterprise clients', badge: 'badge-emerald', label: 'Done', bg: '#ECFDF5', icon: 'ti-circle-check', iconColor: '#10B981' },
+  { text: 'Mobile App v3.0 — Feature complete, entering QA', badge: 'badge-accent', label: 'In Progress', bg: '#EEF2FF', icon: 'ti-progress', iconColor: '#4F46E5' },
+  { text: 'Nexus 2.0 Internal Platform — Planning phase', badge: 'badge-amber', label: 'Upcoming', bg: '#FFFBEB', icon: 'ti-clock', iconColor: '#92400E' },
+  { text: 'Global Expansion — APAC Phase 2 kickoff Q3', badge: 'badge-rose', label: 'Planned', bg: '#FFF1F2', icon: 'ti-map-pin', iconColor: '#F43F5E' },
+];
+
+export const kbPolicies = [
+  { icon: 'ti-file-text', iconBg: '#FFF1F2', iconColor: '#F43F5E', name: 'Employee Handbook 2026', meta: 'Updated Jun 2026 · PDF · 48 pages' },
+  { icon: 'ti-file-text', iconBg: '#EEF2FF', iconColor: '#4F46E5', name: 'Remote Work Policy', meta: 'Updated Jun 2026 · PDF · 12 pages' },
+  { icon: 'ti-file-text', iconBg: '#FFFBEB', iconColor: '#92400E', name: 'POSH Policy 2026', meta: 'Updated May 2026 · PDF · 8 pages' },
+  { icon: 'ti-file-text', iconBg: '#ECFDF5', iconColor: '#10B981', name: 'Leave & Benefits Guide', meta: 'Updated Jan 2026 · PDF · 20 pages' },
+  { icon: 'ti-file-text', iconBg: '#F5F3FF', iconColor: '#6D28D9', name: 'Code of Conduct', meta: 'Updated Dec 2025 · PDF · 15 pages' },
+];
+
+export const forumPosts = [
+  { initials: 'AK', bg: '#065F46', fg: '#A7F3D0', title: 'Tips for async communication across time zones?', replies: 14, author: 'Arjun K.', time: '1 day ago', dept: 'Engineering' },
+  { initials: 'PS', bg: '#312E81', fg: '#C7D2FE', title: 'Best resources for PM certification in 2026?', replies: 9, author: 'Priya S.', time: '3 days ago', dept: 'Product' },
+  { initials: 'MN', bg: '#7F1D1D', fg: '#FECACA', title: 'How does the new Figma library work for non-designers?', replies: 6, author: 'Megha N.', time: '5 days ago', dept: 'Design' },
+  { initials: 'RG', bg: '#78350F', fg: '#FDE68A', title: 'Good books on system design for interviews?', replies: 21, author: 'Raj G.', time: '1 week ago', dept: 'Engineering' },
+];
+
+export const events = [
+  { month: 'Jun', day: '11', name: 'Q2 All-Hands Meeting', detail: 'Virtual + Bangalore HQ · 3 PM', type: 'All Hands', badge: 'badge-rose', badgeLabel: 'Tomorrow', calDay: 11 },
+  { month: 'Jun', day: '15', name: 'Product Roadmap Townhall', detail: 'Conference Room A · 11 AM', type: 'Townhall', badge: '', badgeLabel: '', calDay: 15 },
+  { month: 'Jun', day: '21', name: 'Nexus Carnival — Culture Day', detail: 'Bangalore HQ · All day', type: 'Culture', badge: 'badge-amber', badgeLabel: 'Flagship', calDay: 21 },
+  { month: 'Jun', day: '25', name: 'Leadership Mentorship Open Office', detail: 'Virtual · 2-4 PM', type: 'Workshops', badge: '', badgeLabel: '', calDay: 25 },
+  { month: 'Jul', day: '04', name: 'H2 Strategy Kickoff', detail: 'Auditorium + Virtual · 10 AM', type: 'All Hands', badge: '', badgeLabel: '', calDay: null },
+];
+
+export const celebrations = [
+  { type: 'birthday', banner: '🎂 Happy Birthday, Rajan Kumar!', bannerStyle: { background: '#FDE68A', color: '#78350F' }, desc: 'Rajan is celebrating 3 years at Nexus today. He leads the DevOps function and has been instrumental in our 99.9% uptime record.', hearts: 48, ctaLabel: '🎂 Wish them!', ctaToast: 'Birthday wish sent! 🎂' },
+  { type: 'promotion', banner: '🎊 Priya Sharma promoted to Senior Product Manager!', bannerStyle: { background: '#BFDBFE', color: '#1E40AF' }, desc: 'Priya joined Nexus in 2022 as a PM Associate. Her leadership on Project Phoenix has been remarkable. A well-deserved recognition.', hearts: 72, ctaLabel: '🎊 Congratulate!', ctaToast: 'Congrats sent! 🎉' },
+  { type: 'anniversary', banner: '🏆 Karthik Rao completes 5 years at Nexus!', bannerStyle: { background: '#A7F3D0', color: '#065F46' }, desc: 'Karthik has been a cornerstone of the Customer Success team for 5 remarkable years. From IC to Team Lead — a true Nexus legend.', hearts: 61, ctaLabel: '🏆 Celebrate!', ctaToast: 'Anniversary message sent! 🏆' },
+];
+
+export const people = [
+  { initials: 'CK', bg: '#1E3A5F', fg: '#BAE6FD', name: 'Chandra Kumar', role: 'CEO', dept: 'Leadership', badge: 'badge-accent' },
+  { initials: 'VR', bg: '#0C4A6E', fg: '#BAE6FD', name: 'Vinay Rao', role: 'VP Engineering', dept: 'Leadership', badge: 'badge-emerald' },
+  { initials: 'PS', bg: '#312E81', fg: '#C7D2FE', name: 'Priya Sharma', role: 'Sr. Product Manager', dept: 'Product', badge: 'badge-accent' },
+  { initials: 'AK', bg: '#065F46', fg: '#A7F3D0', name: 'Arjun Kumar', role: 'Staff Engineer', dept: 'Engineering', badge: 'badge-emerald' },
+  { initials: 'MN', bg: '#7F1D1D', fg: '#FECACA', name: 'Megha Nair', role: 'Lead Designer', dept: 'Design', badge: 'badge-amber' },
+  { initials: 'RG', bg: '#78350F', fg: '#FDE68A', name: 'Raj Gupta', role: 'Frontend Engineer', dept: 'Engineering', badge: 'badge-emerald' },
+  { initials: 'SA', bg: '#0C4A6E', fg: '#BAE6FD', name: 'Shruti Agarwal', role: 'CS Lead', dept: 'Customer Success', badge: 'badge-rose' },
+  { initials: 'SK', bg: '#312E81', fg: '#C7D2FE', name: 'Surya Kant', role: 'Software Engineer', dept: 'Engineering', badge: 'badge-emerald' },
+  { initials: 'RV', bg: '#0C4A6E', fg: '#BAE6FD', name: 'Rohan Verma', role: 'Product Manager', dept: 'Product', badge: 'badge-accent' },
+  { initials: 'NS', bg: '#4C1D95', fg: '#DDD6FE', name: 'Neha Singh', role: 'Finance Analyst', dept: 'Finance', badge: 'badge-amber' },
+  { initials: 'TK', bg: '#065F46', fg: '#A7F3D0', name: 'Tanvi Kapoor', role: 'UX Designer', dept: 'Design', badge: 'badge-amber' },
+  { initials: 'SM', bg: '#7F1D1D', fg: '#FECACA', name: 'Suresh M.', role: 'Backend Dev', dept: 'Engineering', badge: 'badge-emerald' },
+];
