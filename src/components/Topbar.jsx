@@ -45,46 +45,55 @@ export function Topbar({ title, showToast, onNavigate }) {
   };
 
   return (
-    <header className="topbar">
-      <div className="page-title">{title}</div>
-      <div className="search-wrapper" ref={ref}>
-        <div className="search-box">
-          <i className="ti ti-search" style={{ fontSize: 15, color: 'var(--text3)', flexShrink: 0 }} />
+    <header style={{ height: 58, background: '#fff', borderBottom: '1px solid #E5E7EB', display: 'flex', alignItems: 'center', padding: '0 24px', gap: 14, flexShrink: 0, position: 'relative', zIndex: 50 }}>
+      <div style={{ fontSize: 16, fontWeight: 700, flex: 1, letterSpacing: '-0.3px' }}>{title}</div>
+
+      <div ref={ref} style={{ position: 'relative', zIndex: 9999 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#F7F8FA', border: '1.5px solid #E5E7EB', borderRadius: 10, padding: '8px 14px', width: 260 }}>
+          <i className="ti ti-search" style={{ fontSize: 15, color: '#9CA3AF', flexShrink: 0 }} />
           <input
             type="text"
             placeholder="Search people, docs, events..."
             value={query}
             onChange={e => { setQuery(e.target.value); setOpen(true); }}
             onFocus={() => setOpen(true)}
+            style={{ border: 'none', outline: 'none', background: 'transparent', fontSize: 13, color: '#111827', width: '100%', fontFamily: 'inherit' }}
           />
           {query && (
-            <i className="ti ti-x" style={{ fontSize: 14, color: 'var(--text3)', cursor: 'pointer', flexShrink: 0 }}
+            <i className="ti ti-x" style={{ fontSize: 14, color: '#9CA3AF', cursor: 'pointer', flexShrink: 0 }}
               onClick={() => { setQuery(''); setOpen(false); }} />
           )}
         </div>
+
         {open && results.length > 0 && (
-          <div className="search-results">
+          <div style={{ position: 'absolute', top: 'calc(100% + 8px)', left: 0, width: 340, background: '#fff', border: '1px solid #E5E7EB', borderRadius: 14, boxShadow: '0 10px 40px rgba(0,0,0,0.15)', zIndex: 9999, overflow: 'hidden' }}>
             {results.map((item, i) => (
-              <div key={i} className="search-result-item" onClick={() => handleSelect(item)}>
-                <div className="search-result-icon" style={{ background: item.bg }}>
-                  <i className={`ti ${item.icon}`} style={{ color: item.color }} />
+              <div key={i}
+                onClick={() => handleSelect(item)}
+                style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', cursor: 'pointer', borderBottom: i < results.length - 1 ? '1px solid #F3F4F6' : 'none' }}
+                onMouseEnter={e => e.currentTarget.style.background = '#F7F8FA'}
+                onMouseLeave={e => e.currentTarget.style.background = '#fff'}
+              >
+                <div style={{ width: 32, height: 32, borderRadius: 8, background: item.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <i className={`ti ${item.icon}`} style={{ color: item.color, fontSize: 15 }} />
                 </div>
                 <div>
-                  <div className="search-result-title">{item.title}</div>
-                  <div className="search-result-sub">{item.sub}</div>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: '#111827' }}>{item.title}</div>
+                  <div style={{ fontSize: 11, color: '#6B7280', marginTop: 1 }}>{item.sub}</div>
                 </div>
               </div>
             ))}
           </div>
         )}
+
         {open && query.trim().length > 0 && results.length === 0 && (
-          <div className="search-results">
-            <div style={{ padding: '16px', textAlign: 'center', color: 'var(--text2)', fontSize: 13 }}>
-              No results for "{query}"
-            </div>
+          <div style={{ position: 'absolute', top: 'calc(100% + 8px)', left: 0, width: 340, background: '#fff', border: '1px solid #E5E7EB', borderRadius: 14, boxShadow: '0 10px 40px rgba(0,0,0,0.15)', zIndex: 9999, padding: '20px 16px', textAlign: 'center' }}>
+            <i className="ti ti-search-off" style={{ fontSize: 24, display: 'block', marginBottom: 6, color: '#9CA3AF' }} />
+            <div style={{ fontSize: 13, color: '#6B7280' }}>No results for "<strong>{query}</strong>"</div>
           </div>
         )}
       </div>
+
       <div style={{ display: 'flex', gap: 6 }}>
         <div className="icon-btn" onClick={() => showToast('You have 3 new notifications')}>
           <i className="ti ti-bell" /><span className="notif-dot" />
@@ -93,7 +102,7 @@ export function Topbar({ title, showToast, onNavigate }) {
           <i className="ti ti-settings" />
         </div>
         <div className="icon-btn" onClick={() => showToast('Profile coming soon')}>
-          <div className="avatar av-sm" style={{ background: '#312E81', color: '#C7D2FE', width: 28, height: 28, fontSize: 11 }}>SK</div>
+          <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#312E81', color: '#C7D2FE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700 }}>SK</div>
         </div>
       </div>
     </header>
