@@ -31,7 +31,7 @@ export default function App() {
 
   const showToast = useCallback((msg) => {
     setToast(msg);
-    setTimeout(() => setToast(null), 2600);
+    setTimeout(() => setToast(null), 2800);
   }, []);
 
   const sections = {
@@ -50,11 +50,9 @@ export default function App() {
     <div className="app">
       <Sidebar active={section} onNavigate={setSection} />
       <div className="main">
-        <Topbar title={SECTION_TITLES[section]} showToast={showToast} />
+        <Topbar title={SECTION_TITLES[section]} showToast={showToast} onNavigate={setSection} />
         <PulseBar />
-        <div className="content">
-          {sections[section]}
-        </div>
+        <div className="content">{sections[section]}</div>
       </div>
       {kudosOpen && <KudosModal onClose={() => setKudosOpen(false)} showToast={showToast} />}
       {toast && <Toast msg={toast} />}
