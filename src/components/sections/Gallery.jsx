@@ -3,18 +3,18 @@ import { useState } from 'react';
 const ALBUMS = ['All', 'Carnival 2025', 'Hackathon', 'Offsite', 'Team Lunches', 'Awards'];
 
 const PHOTOS = [
-  { icon: 'ti-users', label: 'Team Day', color: '#6366F1', bg: '#EEF2FF', album: 'Offsite' },
-  { icon: 'ti-trophy', label: 'Awards Night', color: '#F59E0B', bg: '#FEF3C7', album: 'Awards' },
-  { icon: 'ti-confetti', label: 'Carnival', color: '#F43F5E', bg: '#FFE4E6', album: 'Carnival 2025' },
-  { icon: 'ti-device-laptop', label: 'Hackathon', color: '#10B981', bg: '#D1FAE5', album: 'Hackathon' },
-  { icon: 'ti-pizza', label: 'Team Lunch', color: '#F59E0B', bg: '#FEF3C7', album: 'Team Lunches' },
-  { icon: 'ti-camera', label: 'Offsite 2025', color: '#6366F1', bg: '#EEF2FF', album: 'Offsite' },
-  { icon: 'ti-star', label: 'Star Awards', color: '#F59E0B', bg: '#FEF3C7', album: 'Awards' },
-  { icon: 'ti-music', label: 'Carnival', color: '#F43F5E', bg: '#FFE4E6', album: 'Carnival 2025' },
-  { icon: 'ti-rocket', label: 'Hack Finals', color: '#10B981', bg: '#D1FAE5', album: 'Hackathon' },
-  { icon: 'ti-heart', label: 'Culture Day', color: '#F43F5E', bg: '#FFE4E6', album: 'Carnival 2025' },
-  { icon: 'ti-coffee', label: 'Friday Lunch', color: '#F59E0B', bg: '#FEF3C7', album: 'Team Lunches' },
-  { icon: 'ti-map-pin', label: 'Bangalore HQ', color: '#6366F1', bg: '#EEF2FF', album: 'Offsite' },
+  { url: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=400&h=300&fit=crop', label: 'Team Day', album: 'Offsite' },
+  { url: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&h=300&fit=crop', label: 'Awards Night', album: 'Awards' },
+  { url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=300&fit=crop', label: 'Carnival', album: 'Carnival 2025' },
+  { url: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop', label: 'Hackathon', album: 'Hackathon' },
+  { url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop', label: 'Team Lunch', album: 'Team Lunches' },
+  { url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop', label: 'Offsite 2025', album: 'Offsite' },
+  { url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop', label: 'Star Awards', album: 'Awards' },
+  { url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop', label: 'Carnival Night', album: 'Carnival 2025' },
+  { url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=300&fit=crop', label: 'Hack Finals', album: 'Hackathon' },
+  { url: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=300&fit=crop', label: 'Culture Day', album: 'Carnival 2025' },
+  { url: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop', label: 'Friday Lunch', album: 'Team Lunches' },
+  { url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop', label: 'Bangalore HQ', album: 'Offsite' },
 ];
 
 export default function Gallery({ showToast }) {
@@ -43,10 +43,20 @@ export default function Gallery({ showToast }) {
       <div className="gallery-grid">
         {filtered.map((photo, i) => (
           <div key={i} className="gallery-thumb"
-            style={{ background: photo.bg, flexDirection: 'column', gap: 8 }}
+            style={{ padding: 0, overflow: 'hidden', position: 'relative' }}
             onClick={() => showToast(`Opening ${photo.label}...`)}>
-            <i className={`ti ${photo.icon}`} style={{ color: photo.color, fontSize: 30 }} />
-            <div className="label">{photo.label}</div>
+            <img
+              src={photo.url}
+              alt={photo.label}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+            <div style={{
+              position: 'absolute', bottom: 0, left: 0, right: 0,
+              background: 'linear-gradient(transparent, rgba(0,0,0,0.6))',
+              color: '#fff', padding: '18px 10px 8px', fontSize: 12, fontWeight: 500
+            }}>
+              {photo.label}
+            </div>
           </div>
         ))}
       </div>
